@@ -1,0 +1,42 @@
+:root {
+    --primary-color: #07061a !important;
+    --pink-color: #ED4ABF !important;
+    --light-gray: rgba(255, 255, 255, 0.10) !important;
+}
+
+.pink-color {
+    background-color: var(--pink-color) !important;
+}
+
+.pink-color-text {
+    color: var(--pink-color) !important;
+}
+
+.card {
+    background: var(--light-gray) !important;
+}
+
+.card-body {
+    background: var(--light-gray) !important;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+.primary-color {
+    background-color: var(--primary-color) !important;
+    z-index: 2 !important;
+}
+
+.mediator {
+    z-index: 999;
+}
+
+.mediator-title {
+    font-size: 3em;
+}
+
+.blog {
+    background-color: var(--light-gray) !important;
+}
