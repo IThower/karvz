@@ -1,6 +1,3 @@
-@extends('layouts.app')
-
-@section('content')
 <header class="masthead" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp')">
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -38,4 +35,3 @@
         </div>
     </div>
 </div>
-@endsection

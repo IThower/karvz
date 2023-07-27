@@ -18,7 +18,10 @@
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Roboto&display=swap" rel="stylesheet">
+
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -79,8 +82,9 @@
 
     <footer class="border-top">
         <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center  text-light">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="text-center fst-italic text-primary mb-4">&copy; 2023 <span class="fw-bold">Karvz.</span> Todos os direitos reservados</div>
                     <ul class="list-inline text-center">
                         <li class="list-inline-item">
                             <a href="#!">
@@ -107,7 +111,7 @@
                             </a>
                         </li>
                     </ul>
-                    <div class="small text-center text-muted fst-italic">Copyright &copy; <a href="https://alemsbaja.hashnode.dev">KARVZ</a> @2023</div>
+                    
                 </div>
             </div>
         </div>

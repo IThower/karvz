@@ -1,7 +1,21 @@
 :root {
     --primary-color: #07061a !important;
+    --obsidian-shard: #020312 !important;
     --pink-color: #ED4ABF !important;
     --light-gray: rgba(255, 255, 255, 0.10) !important;
+    --prussian-nights: #0b105f;
+}
+
+.obsidian-shard-bg {
+    background-color: var(--obsidian-shard);
+}
+
+.obsidian-shard-text {
+    color: var(--obsidian-shard);
+}
+
+.hero {
+    height: 90vh;
 }
 
 .pink-color {
@@ -14,14 +28,41 @@
 
 .card {
     background: var(--light-gray) !important;
+    padding: 0 !important;
+
 }
 
 .card-body {
     background: var(--light-gray) !important;
+    height: 200px !important;
+
+
+}
+
+.servicos {
+    background-color: var(--obsidian-shard);
+}
+
+.card-body img {
+
+    height: 80px;
 }
 
 body {
-    background-color: var(--primary-color);
+    background-image: linear-gradient(130deg,
+            hsl(236deg 79% 21%) 0%,
+            hsl(236deg 80% 19%) 1%,
+            hsl(236deg 80% 18%) 2%,
+            hsl(236deg 80% 16%) 4%,
+            hsl(237deg 79% 15%) 5%,
+            hsl(237deg 79% 13%) 8%,
+            hsl(236deg 80% 12%) 11%,
+            hsl(236deg 80% 10%) 15%,
+            hsl(235deg 81% 8%) 21%,
+            hsl(238deg 78% 7%) 30%,
+            hsl(237deg 79% 5%) 46%,
+            hsl(236deg 80% 4%) 100%);
+    font-family: DM Sans;
 }
 
 .primary-color {
@@ -31,12 +72,54 @@ body {
 
 .mediator {
     z-index: 999;
+    height: 300px;
 }
 
 .mediator-title {
     font-size: 3em;
+    margin-bottom: 0 !important;
 }
 
-.blog {
+.mediator-description {
+    margin-bottom: 0 !important;
+}
+
+.mediator-description .blog {
     background-color: var(--light-gray) !important;
+}
+
+.newsletter {
+    background-color: var(--light-gray) !important;
+}
+
+.Email-Newsletter {
+    border-radius: 0.3125rem;
+    border: 1.5px solid #020312;
+    background: rgba(2, 3, 18, 0.60);
+}
+
+.h2-newsletter {
+    color: var(--black-white-white, #FFF);
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+    /* 2.8rem */
+}
+
+.btnnewsletter {
+    color: #020312;
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.navbar-brand img {
+    z-index: 999 !important;
 }
