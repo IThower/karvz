@@ -2,7 +2,7 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="hero">
+<section class="hero my-5">
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-6">
@@ -26,7 +26,7 @@
     </div>
 </section>
 
-<section class="servicos py-5">
+<section class="servicos my-5">
     <div class="container">
         <div class="section-title text-center mb-5">
             <h3 class="pink-color-text">Nós te ajudamos com</h3>
@@ -68,8 +68,7 @@
                 <div class="card">
                     <div class="card-body">
                         <img src="images/card-4.svg" alt="" class="img-fluid">
-                        <h5 class="card-title text-light">Marketing de
-                            Redes Sociais</h5>
+                        <h5 class="card-title text-light">Redação de Conteúdos</h5>
                         <a href="#" class="btn pink-color">Veja Mais</a>
                     </div>
                 </div>
@@ -110,12 +109,85 @@
     </div>
 </div>
 
-<section class="blog">
+<section class="blog my-5">
     <div class="container text-center py-5">
     <h3 class="pink-color-text fs-5 pt-5">Ultimas Noticias</h3>
 
     <h2 class="text-light fw-bold">NOSSO BLOG</h2>
 </div>
+</section>
+
+<section class="testemunhos my-5">
+    <div class="container">
+        <div class="testemunhos-title d-flex justify-content-around my-5">
+
+            <div class="w-text">
+                <h3 class="lead fw-4 pink-color-text">O que os clientes dizem</h3>
+                <h2 class="fw-bold fw-2 text-light">Testemunhos</h2>
+            </div>
+                <div class="d-flex gap-3">
+                    <img src="images/arrow-left.svg" alt="arrow-left" class="light-gray-bg h-100 p-3 px-4 rounded">
+                    <img src="images/arrow-right.svg" alt="arrow-right" class="pink-color h-100 p-3 px-4 rounded">
+
+            </div>
+        </div>
+
+        <div class="row d-md-flex justify-content-center gx-4 gap-4">
+                <div class="card p-4" style="width: 25rem;">
+                    <div class="p-4 light-gray-bg">
+                      <p class="card-text lead text-secondary">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint velit officia consequat duis enim velit mollit exercitation veniam.</p>
+                      
+                    <div class="star-filled d-flex py-4">
+                        <img src="images/star-filled.svg" alt="star-filled">
+                        <img src="images/star-filled.svg" alt="star-filled">
+                        <img src="images/star-filled.svg" alt="star-filled">
+                        <img src="images/star-filled.svg" alt="star-filled">
+                        <img src="images/star-filled.svg" alt="star-filled">
+                    </div>
+
+                    <div class="user-content d-flex">
+
+                        <img src="images/avatar-img.svg" alt="" class="me-3">
+
+                        <div class="user-content-text">
+                        <p class="text-light fw-4 fw-bold m-0">Fabio Carvalho</p>
+                        <p class="fw-5 text-secondary m-0">24 de julho de 2023 - E-Commerce</p>
+                    </div>
+
+                    </div>
+
+                    </div>
+                </div>
+
+                    <div class="card p-4" style="width: 25rem;">
+                        <div class="p-4 light-gray-bg">
+                          <p class="card-text lead text-secondary">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint velit officia consequat duis enim velit mollit exercitation veniam.</p>
+                          
+                        <div class="star-filled d-flex py-4">
+                            <img src="images/star-filled.svg" alt="star-filled">
+                            <img src="images/star-filled.svg" alt="star-filled">
+                            <img src="images/star-filled.svg" alt="star-filled">
+                            <img src="images/star-filled.svg" alt="star-filled">
+                            <img src="images/star-filled.svg" alt="star-filled">
+                        </div>
+    
+                        <div class="user-content d-flex">
+    
+                            <img src="images/avatar-img.svg" alt="" class="me-3">
+    
+                            <div class="user-content-text">
+                            <p class="text-light fw-4 fw-bold m-0">Fabio Carvalho</p>
+                            <p class="fw-5 text-secondary m-0">24 de julho de 2023 - E-Commerce</p>
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+
+        <div class="col-12 text-center">
+            <img src="/images/scroll.svg" alt="" class="img-fluid">
+        </div>
+
+    </div>
 </section>
 
 

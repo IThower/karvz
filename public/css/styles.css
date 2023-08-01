@@ -10,8 +10,40 @@
     background-color: var(--obsidian-shard);
 }
 
+.gap-5 {
+    gap: 5;
+}
+
+.gap-4 {
+    gap: 4;
+}
+
+.gap-3 {
+    gap: 3;
+}
+
+.gap-2 {
+    gap: 2;
+}
+
+.gap-1 {
+    gap: 1;
+}
+
+.gap-15 {
+    gap: 15em;
+}
+
 .obsidian-shard-text {
     color: var(--obsidian-shard);
+}
+
+.light-gray-bg {
+    background-color: var(--light-gray) !important;
+}
+
+.testemunhos-title {
+    width: 100%;
 }
 
 .hero {
@@ -122,4 +154,9 @@ body {
 
 .navbar-brand img {
     z-index: 999 !important;
+}
+
+.blog {
+    background-color: var(--light-gray);
+
 }
