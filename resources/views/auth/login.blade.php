@@ -1,4 +1,3 @@
-
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
 <header class="masthead" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp')">
@@ -16,10 +15,10 @@
 
 <section class="vh-100" style="background-color: #eee;">
     <div class="container h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="row d-flex justify-content-center align-items-center">
             <div class="col-lg-12 col-xl-11">
                 <div class="card text-black" style="border-radius: 25px;">
-                    <div class="card-body p-md-5">
+                    <div class="card p-md-5">
                         <div class="row justify-content-center">
                             <div class="col-md-10 col-lg-6 col-xl-5">
 
@@ -54,13 +53,10 @@
                                             @enderror
                                         </div>
                                     </div>
-
                                     <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                                         <button type="submit" class="btn btn-primary btn-lg">Login</button>
                                     </div>
-
                                 </form>
-
                             </div>
                         </div>
                     </div>

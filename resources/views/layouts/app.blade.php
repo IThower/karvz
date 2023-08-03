@@ -45,6 +45,8 @@
                 <ul class="navbar-nav ms-auto py-4 py-lg-0 pink-color-text">
                     @guest
 
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 pink-color-text" href="{{ route('home') }}">Home</a></li>
+
                     @if (Route::has('login'))
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 pink-color-text" href="{{ route('login') }}">{{ __('Login') }}</a></li>
                     @endif
@@ -53,13 +55,15 @@
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 pink-color-text" href="{{ route('register') }}">{{ __('Register') }}</a></li>
                     @endif
 
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 pink-color-text" href="{{ route('posts.index') }}">Posts</a></li>
+ 
 
                     @else
 
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 pink-color-text" href="{{ route('home') }}">Home</a></li>
 
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 pink-color-text" href="{{ route('posts.index') }}">{{ __('Posts') }}</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 pink-color-text" href="{{ route('blog') }}">All Posts</a></li>
+
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 pink-color-text" href="{{ route('posts.index') }}">{{ __('My Posts') }}</a></li>
 
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 pink-color-text" href="{{ route('posts.create') }}">{{ __('Add Post') }}</a></li>
 

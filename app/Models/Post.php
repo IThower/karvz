@@ -24,7 +24,6 @@ class Post extends Model
     }
 
 
-
     // public function created_at(): Attribute
     // {
     //     return new Attribute(

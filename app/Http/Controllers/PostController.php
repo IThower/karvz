@@ -6,6 +6,7 @@ use App\Models\Post;
 use Illuminate\Http\Request;
 use Prologue\Alerts\Facades\Alert;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 
 class PostController extends Controller
 {
@@ -18,7 +19,7 @@ class PostController extends Controller
     {
         $posts = Post::where('user_id', Auth::user()->id)->latest()->get();
 
-        return view('posts.index', compact('posts'));
+        return response(view('posts.index', compact('posts')));
     }
 
     /**
@@ -28,7 +29,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+        return response(view('posts.create'));
     }
 
     /**
@@ -37,7 +38,7 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request): \Illuminate\Http\RedirectResponse
     {
         $request->validate([
             'title' => 'required|string|max:255',
@@ -71,7 +72,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        return view('posts.show', compact('post'));
+        return response(view('posts.show', compact('post')));
     }
 
     /**
@@ -82,7 +83,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        return view('posts.edit', compact('post'));
+        return response(view('posts.edit', compact('post')));
     }
 
     /**
@@ -92,7 +93,7 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request, Post $post): \Illuminate\Http\RedirectResponse
     {
         $request->validate([
             'title' => 'required|string|max:255',
@@ -111,27 +112,37 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy(Post $post): \Illuminate\Http\RedirectResponse
     {
         $post->delete();
 
         return redirect()->route('posts.index')
             ->with('success', 'Post deleted!!!');
     }
+    public function home()
+    {
 
+        return response(view('home'));
+    }
 
     public function all_posts()
     {
         $posts = Post::latest()->get();
 
-        return view('blog', compact('posts'));
+        return response(view('blog', compact('posts')));
     }
 
 
-    public function home()
-    {
 
-        return view('home');
+
+
+    public function preview()
+    {
+        $recentPosts = Post::orderBy('created_at', 'desc')
+            ->take(6)
+            ->get();
+
+        return view('home', compact('recentPosts'));
     }
 
 }

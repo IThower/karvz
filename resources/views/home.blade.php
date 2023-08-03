@@ -4,7 +4,7 @@
 @section('content')
 <section class="hero my-5">
     <div class="container">
-        <div class="row">
+        <div class="row h-100">
             <div class="col-12 col-md-6">
                 <span class="badge rounded-pill pink-color obsidian-shard-text mt-5 mb-2 text-uppercase">Top Trending</span>
                 <h1 class="text-light fw-bold">Como aumentar suas vendas.</h1>
@@ -35,40 +35,40 @@
 
         <div class="row g-2 text-center ">
             <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
+                <div class="card card1">
+                    <div class="card-body card1-body">
                         <img src="images/card-1.svg" alt="" class="img-fluid">
-                        <h5 class="card-title text-light">Design de Website &
+                        <h5 class="card-title text-light p-1">Design de Website &
                             Desenvolvimento</h5>
                         <a href="#" class="btn pink-color">Veja Mais</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
+                <div class="card card1">
+                    <div class="card-body card1-body">
                         <img src="images/card-2.svg" alt="" class="img-fluid">
-                        <h5 class="card-title text-light">Otimização de
+                        <h5 class="card-title text-light p-1">Otimização de
                             Mecanismos de Busca</h5>
                         <a href="#" class="btn pink-color">Veja Mais</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
+                <div class="card card1">
+                    <div class="card-body card1-body">
                         <img src="images/card-3.svg" alt="" class="img-fluid">
-                        <h5 class="card-title text-light">Marketing de
+                        <h5 class="card-title text-light p-1">Marketing de
                             Redes Sociais</h5>
                         <a href="#" class="btn pink-color">Veja Mais</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
+                <div class="card card1">
+                    <div class="card-body card1-body">
                         <img src="images/card-4.svg" alt="" class="img-fluid">
-                        <h5 class="card-title text-light">Redação de Conteúdos</h5>
+                        <h5 class="card-title text-light p-1">Redação de Conteúdos</h5>
                         <a href="#" class="btn pink-color">Veja Mais</a>
                     </div>
                 </div>
@@ -110,10 +110,32 @@
 </div>
 
 <section class="blog my-5">
+
     <div class="container text-center py-5">
     <h3 class="pink-color-text fs-5 pt-5">Ultimas Noticias</h3>
+    <h2 class="text-light fw-bold mb-5">NOSSO BLOG</h2>
+    <div class="row g-2 text-center">
+        @foreach($recentPosts as $post)
+    <div class="col-md-6">
+    <div class="card card2">
+    <div class="card-body text-start">
+        <div class="d-flex">
+            <span class="badge pink-color me-3">TECNOLOGIA</span>
+            <span class="badge pink-color">MARKETING</span>
+        </div>
+        <a href="{{ route('post.show', $post->id) }}" class="post-preview text-light" style="text-decoration: none;"><h5 class="card-title p-2" style="margin-left: -8px">{{ $post->title }}</h5></a>
+      <h6 class="card-subtitle mb-2 card1-subtitle-color"> Escrito por: <span class="fw-bold">{{ $post->user->name }}</span> em: <span class="fw-bold">{{  $post->created_at->format('Y-m-d')  }}</span></h6>
+    </div>
+  </div>
+</div>
 
-    <h2 class="text-light fw-bold">NOSSO BLOG</h2>
+
+
+
+@endforeach
+<div class="text-center w-100 btnpreviewblog">
+<a class="btn pink-color fw-bold my-4 w-100 py-3" href="{{ route('home',$post->id) }}">Ver Mais Noticias</a>
+</div>
 </div>
 </section>
 
@@ -133,7 +155,7 @@
         </div>
 
         <div class="row d-md-flex justify-content-center gx-4 gap-4">
-                <div class="card p-4" style="width: 25rem;">
+                <div class="card card1 p-4" style="width: 25rem;">
                     <div class="p-4 light-gray-bg">
                       <p class="card-text lead text-secondary">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint velit officia consequat duis enim velit mollit exercitation veniam.</p>
                       
@@ -159,7 +181,7 @@
                     </div>
                 </div>
 
-                    <div class="card p-4" style="width: 25rem;">
+                    <div class="card card1 p-4" style="width: 25rem;">
                         <div class="p-4 light-gray-bg">
                           <p class="card-text lead text-secondary">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint velit officia consequat duis enim velit mollit exercitation veniam.</p>
                           

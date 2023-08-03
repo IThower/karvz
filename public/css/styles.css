@@ -7,7 +7,7 @@
 }
 
 .obsidian-shard-bg {
-    background-color: var(--obsidian-shard);
+    background-color: var(--obsidian-shard) !important;
 }
 
 .gap-5 {
@@ -35,11 +35,20 @@
 }
 
 .obsidian-shard-text {
-    color: var(--obsidian-shard);
+    color: var(--obsidian-shard) !important;
 }
 
 .light-gray-bg {
     background-color: var(--light-gray) !important;
+}
+
+
+.light-gray {
+    color: var(--light-gray) !important;
+}
+
+.card1-subtitle-color {
+    color: rgba(255, 255, 255, 0.70);
 }
 
 .testemunhos-title {
@@ -58,27 +67,31 @@
     color: var(--pink-color) !important;
 }
 
-.card {
+.card1 {
     background: var(--light-gray) !important;
     padding: 0 !important;
-
 }
 
-.card-body {
+.card1-body {
     background: var(--light-gray) !important;
     height: 200px !important;
 
-
 }
+
+.card1-body img {
+
+    height: 80px;
+}
+
+.card2 {
+    background-color: var(--obsidian-shard);
+}
+
 
 .servicos {
     background-color: var(--obsidian-shard);
 }
 
-.card-body img {
-
-    height: 80px;
-}
 
 body {
     background-image: linear-gradient(130deg,

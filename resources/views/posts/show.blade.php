@@ -1,17 +1,27 @@
 @extends('layouts.app')
 
-@section('blog')
-<header class="masthead" style="background-image: url('img/post-bg.jpg')">
+@section('content')
+
+<header class="masthead text-light" style="background-image: url('img/post-bg.jpg')">
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
                 <div class="post-heading">
-                    <h1>Blog Post</h1>
+                    <h1>Blog Post - dentro</h1>
                     <h2 class="subheading">{{ $post->title }}</h2>
                     <span class="meta">
                         Posted by
-                        <a href="#!">{{ $post->user->name }}</a>
-                        on {{ $post->created_at }}
+                        @if($post->user)
+                            <a href="#!">{{ $post->user->name }}</a>
+                        @else
+                            Usuario Desconhecido    
+                        @endif
+                        on
+                        @if($post->created_at)
+                            {{ $post->created_at->format('Y-m-d') }}
+                        @else
+                            Data Desconhecida
+                        @endif
                     </span>
                 </div>
             </div>
@@ -24,12 +34,10 @@
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
                 <h2 class="section-heading">{{ $post->title }}</h2>
-
-                
                 <p>
                     {{ $post->description }}
                 </p>
-                @if ($post->user->id == Auth::user()->id)
+                @if ($post->user && $post->user->id == Auth::user()->id)
                 <div class="d-flex justify-content-end">
 
                     <div>
