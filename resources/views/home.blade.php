@@ -203,11 +203,18 @@ background: linear-gradient(180deg, rgba(2,3,18,1) 50%, rgba(29,30,50,1) 50%);">
                     </div>
                 @endforeach
 
-                <div class="text-center w-100 btnpreviewblog">
-                    <a class="btn pink-color fw-bold my-4 w-100 py-3" href="{{ route('blog', $post->id) }}">Ver Mais
-                        Noticias</a>
-                </div>
+                @if ($posts->isEmpty())
+                    <p>Nenhuma notícia disponível no momento.</p>
+                @else
+                    @foreach ($posts as $post)
+                        <div class="text-center w-100 btnpreviewblog">
+                            <a class="btn pink-color fw-bold my-4 w-100 py-3" href="{{ route('blog', $post->id) }}">Ver
+                                Mais
+                                Noticias</a>
+                        </div>
+                    @endforeach
             </div>
+            @endif
     </section>
 
     <!-- Section Testemunhos ---------------------------------------------------------------------------- -->
