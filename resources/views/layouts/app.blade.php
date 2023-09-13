@@ -5,15 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }} ">
+
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('', 'aaaaaaaaaaa') }}</title>
-
-
-    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+    <title>{{ config('', 'Karvz') }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
@@ -21,7 +20,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Roboto&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.cdnfonts.com/css/rodfat-two-demo" rel="stylesheet">
+                
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -30,11 +30,10 @@
 
 <body>
 
-  
     <header>
         <div class="container">
             <nav class="navbar navbar-expand-lg" id="mainNav">
-                <div class="container-fluid">
+                <div class="container-fluid p-0">
                     <a class="navbar-brand" href="">
                         <img src="images/karvz-logo.png" alt="">
                     </a>
@@ -73,9 +72,7 @@
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
                     </form>
-
                     </li>
-
                     @endguest
                 </ul>
                     </div>
@@ -84,33 +81,31 @@
     </header>
     @yield('content')
 
-    <footer class="border-top">
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
+    <footer>
+        <div class="container">
+            <div class="row justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
-                    <div class="text-center fst-italic text-primary mb-4">&copy; 2023 <span class="fw-bold">Karvz.</span> Todos os direitos reservados</div>
-                    <ul class="list-inline text-center">
-                        <li class="list-inline-item">
+                    <div class="text-center text-secondary mt-5 mb-4 lead">&copy; 2023 
+                        <span class="fw-bold">Karvz.</span> Todos os direitos reservados</div>
+                    <ul class="list-inline text-center light-gray mb-5" style="margin-bottom: 0;">
+                        <li class="list-inline-item"></i>
                             <a href="#!">
                                 <span class="fa-stack fa-lg">
-                                    <i class="fas fa-circle fa-stack-2x"></i>
-                                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                                    <i class="fa-brands fa-x-twitter" style="color: #909097"></i>
                                 </span>
                             </a>
                         </li>
                         <li class="list-inline-item">
                             <a href="#!">
                                 <span class="fa-stack fa-lg">
-                                    <i class="fas fa-circle fa-stack-2x"></i>
-                                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse" style="color: #909097"></i>
                                 </span>
                             </a>
                         </li>
                         <li class="list-inline-item">
                             <a href="#!">
                                 <span class="fa-stack fa-lg">
-                                    <i class="fas fa-circle fa-stack-2x"></i>
-                                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                    <i class="fa-brands fa-instagram" style="color: #909097"></i>
                                 </span>
                             </a>
                         </li>

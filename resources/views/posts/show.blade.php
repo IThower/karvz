@@ -32,7 +32,7 @@
 <article class="mb-4">
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
-            <div class="col-md-10 col-lg-8 col-xl-7">
+            <div class="col-md-10 col-lg-8 col-xl-7 mt-4 text-light">
                 <h2 class="section-heading">{{ $post->title }}</h2>
                 <p>
                     {{ $post->description }}
@@ -44,9 +44,9 @@
                         <form action="{{ route('posts.destroy', $post->id) }}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <a class="btn btn-primary" href="{{ route('posts.edit',$post->id) }}">Edit</a>
+                            <a class="btn btn-primary px-4" href="{{ route('posts.edit',$post->id) }}">Editar</a>
 
-                            <button type="submit" class="btn btn-danger">Delete</button>
+                            <button type="submit" class="btn btn-danger px-4">Deletar</button>
                         </form>
 
                     </div>

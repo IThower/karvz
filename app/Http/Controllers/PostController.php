@@ -47,7 +47,6 @@ class PostController extends Controller
 
         $post = new Post($request->all());
         $user = Auth::user();
-
         $user->posts()->save($post);
 
 
@@ -60,6 +59,7 @@ class PostController extends Controller
         // return redirect()->route('posts.create')->with('alerts', Alert::all());
 
         //comment the line below to try the prologue package.
+
         return redirect()->route('posts.create')
             ->with('success', 'Post created successfully.');
     }
@@ -133,16 +133,19 @@ class PostController extends Controller
     }
 
 
-
-
-
     public function preview()
     {
         $recentPosts = Post::orderBy('created_at', 'desc')
+
             ->take(6)
             ->get();
 
-        return view('home', compact('recentPosts'));
+        return response(view('home', compact('recentPosts')));
+    }
+
+    public function links()
+    {
+        return response(view('links'));
     }
 
 }

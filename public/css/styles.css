@@ -42,7 +42,6 @@
     background-color: var(--light-gray) !important;
 }
 
-
 .light-gray {
     color: var(--light-gray) !important;
 }
@@ -50,6 +49,8 @@
 .card1-subtitle-color {
     color: rgba(255, 255, 255, 0.70);
 }
+
+
 
 .testemunhos-title {
     width: 100%;
@@ -70,21 +71,25 @@
 .card1 {
     background: var(--light-gray) !important;
     padding: 0 !important;
+    border-radius: 12px!important;
 }
 
-.card1-body {
-    background: var(--light-gray) !important;
-    height: 200px !important;
 
+
+.card{
+    border-radius: 12px;
+    background-color: var(--light-gray);
+    height: 250px;
+    padding: 30px;
 }
-
-.card1-body img {
-
+.card img {
     height: 80px;
 }
 
 .card2 {
     background-color: var(--obsidian-shard);
+    padding: 20px;
+    border-radius: 12px;
 }
 
 
@@ -108,6 +113,18 @@ body {
             hsl(237deg 79% 5%) 46%,
             hsl(236deg 80% 4%) 100%);
     font-family: DM Sans;
+}
+
+
+.carousel-indicators {
+    filter: invert(42%) sepia(98%) saturate(1531%) hue-rotate(289deg) brightness(95%) contrast(96%);
+}
+
+.karvz-text-logo{
+    font-family: 'Rodfat Two Demo', sans-serif;
+    color: var(--pink-color) !important;
+    padding: 0;
+    margin: 0;
 }
 
 .primary-color {

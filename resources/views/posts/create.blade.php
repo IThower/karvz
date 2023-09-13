@@ -5,7 +5,7 @@
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                <div class="page-heading">
+                <div class="page-heading text-light">
                     <h1>Create Post</h1>
                     <span class="subheading">Share knowledge</span>
                 </div>
@@ -13,6 +13,8 @@
         </div>
     </div>
 </header>
+
+{{-- CRIAR BLOG POSTS VIEW -----------------------------------------------------------------------------------}}
 
 <main class="mb-4">
     <div class="container px-4 px-lg-5">
@@ -27,16 +29,14 @@
                 </ul>
             </div>
             @endif
-
-            
-            @if ($message = Session::get('success'))
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <p class="text-light">Want to share knowledge? Enter the title and content then publish</p>
+                <div class="my-5">
+                    @if ($message = Session::get('success'))
             <div class="alert alert-success">
                 <p>{{ $message }}</p>
             </div>
             @endif
-            <div class="col-md-10 col-lg-8 col-xl-7">
-                <p>Want to share knowledge? Enter the title and content then publish</p>
-                <div class="my-5">
                     <form action="{{ route('posts.store') }}" method="POST">
                         @csrf
                         <div class="form-floating">
