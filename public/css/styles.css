@@ -6,8 +6,49 @@
     --prussian-nights: #0b105f;
 }
 
+@font-face {
+    font-family: 'Rodfat Two Demo';
+    src: url('/fonts/RodfatTwoDemo.woff2') format('woff2'),
+        url('/fonts/RodfatTwoDemo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DM Sans 9pt';
+    src: url('/fonts/DMSans-9ptRegular.woff2') format('woff2'),
+        url('/fonts/DMSans-9ptRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DM Sans 9pt';
+    src: url('/fonts/DMSans-9ptItalic.woff2') format('woff2'),
+        url('/fonts/DMSans-9ptItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+
+
+h1,h2,h3,h4,p,button,a{
+    font-family: 'DM Sans', sans-serif!important;
+}
+
+
+
 .obsidian-shard-bg {
     background-color: var(--obsidian-shard) !important;
+}
+
+.img-fluid2{
+    height: 60vh!important;
+    max-width: 100%!important;
 }
 
 .gap-5 {
@@ -121,7 +162,7 @@ body {
 }
 
 .karvz-text-logo{
-    font-family: 'Rodfat Two Demo', sans-serif;
+    font-family: 'Rodfat Two Demo', sans-serif!important;
     color: var(--pink-color) !important;
     padding: 0;
     margin: 0;

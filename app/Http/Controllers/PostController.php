@@ -72,7 +72,11 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        return response(view('posts.show', compact('post')));
+        $recentPosts = Post::orderBy('created_at', 'desc')
+            ->take(3)
+            ->get();
+
+        return response(view('posts.show', compact('post', 'recentPosts')));
     }
 
     /**
@@ -142,6 +146,7 @@ class PostController extends Controller
 
         return response(view('home', compact('recentPosts')));
     }
+
 
     public function links()
     {

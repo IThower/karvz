@@ -18,7 +18,7 @@
                 <div class="container">
                     <div class="carousel-item active">
                         <div class="row align-items-center">
-                            <div class="col-md-6 fs-4" style="margin-top: 100px;">
+                            <div class="col-md-7 fs-4">
                                 <span class="badge rounded-pill pink-color obsidian-shard-text mt-5 mb-2 text-uppercase">Top
                                     Trending</span>
                                 <h1 class="text-light fw-bold">Como aumentar suas vendas.</h1>
@@ -30,15 +30,15 @@
                                 <a class="btn pink-color px-4 obsidian-shard-text fw-bold text-uppercase" href="#"
                                     role="button">Quero Vender Mais</a>
                             </div>
-                            <div class="col-md-6" style="margin-top: 120px;">
-                                <img src="/images/currency-monochromatic-12-x.svg" alt=""
-                                    class="d-block w-100 mx-auto" style="height: 400px;">
+                            <div class="col-md-5">
+                                <img class="img-fluid2" src="images/currency-monochromatic-2.svg" alt=""
+                                    style="float: right">
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="row align-items-center">
-                            <div class="col-md-6 fs-4" style="margin-top: 100px;">
+                            <div class="col-md-7 fs-4">
                                 <span
                                     class="badge rounded-pill pink-color obsidian-shard-text mt-5 mb-2 text-uppercase">Projects</span>
                                 <h1 class="text-light fw-bold">Veja Nossos Projetos.</h1>
@@ -50,15 +50,15 @@
                                 <a class="btn pink-color px-4 obsidian-shard-text fw-bold text-uppercase" href="#"
                                     role="button">Encontrar Projetos</a>
                             </div>
-                            <div class="col-md-6" style="margin-top: 120px;">
-                                <img src="/images/currency-monochromatic-12-x.svg" alt=""
-                                    class="d-block w-100 mx-auto" style="height: 400px;">
+                            <div class="col-md-5">
+                                <img src="images/Startup_Monochromatic_1.svg" alt="" class="img-fluid2"
+                                    style="float: right">
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="row align-items-center">
-                            <div class="col-md-6 fs-4" style="margin-top: 100px;">
+                            <div class="col-md-7 fs-4">
                                 <span
                                     class="badge rounded-pill pink-color obsidian-shard-text mt-5 mb-2 text-uppercase">Blogs</span>
                                 <h1 class="text-light fw-bold">Criando seu E-Commerce.</h1>
@@ -70,9 +70,8 @@
                                 <a class="btn pink-color px-4 obsidian-shard-text fw-bold text-uppercase" href="#"
                                     role="button">Quero um e-commerce</a>
                             </div>
-                            <div class="col-md-6" style="margin-top: 120px;">
-                                <img src="/images/currency-monochromatic-12-x.svg" alt=""
-                                    class="d-block w-100 mx-auto" style="height: 400px;">
+                            <div class="col-md-5">
+                                <img src="/images/Photo3.svg" alt="" class="img-fluid2" style="float: right">
                             </div>
                         </div>
                     </div>
@@ -197,22 +196,20 @@ background: linear-gradient(180deg, rgba(2,3,18,1) 50%, rgba(29,30,50,1) 50%);">
                                 </a>
                                 <h6 class="card-subtitle mb-2 card1-subtitle-color"> Escrito por: <span
                                         class="fw-bold">{{ $post->user->name }}</span> em: <span
-                                        class="fw-bold">{{ $post->created_at->format('Y-m-d') }}</span></h6>
+                                        class="fw-bold">{{ $post->created_at->format('d/m/20y') }}</span></h6>
                             </div>
                         </div>
                     </div>
                 @endforeach
 
-                @if ($posts->isEmpty())
+                @if ($recentPosts->isEmpty())
                     <p>Nenhuma notícia disponível no momento.</p>
                 @else
-                    @foreach ($posts as $post)
-                        <div class="text-center w-100 btnpreviewblog">
-                            <a class="btn pink-color fw-bold my-4 w-100 py-3" href="{{ route('blog', $post->id) }}">Ver
-                                Mais
-                                Noticias</a>
-                        </div>
-                    @endforeach
+                    <div class="text-center w-100 btnpreviewblog">
+                        <a class="btn pink-color fw-bold my-4 w-100 py-3" href="{{ route('blog', $post->id) }}">Ver
+                            Mais
+                            Noticias</a>
+                    </div>
             </div>
             @endif
     </section>
